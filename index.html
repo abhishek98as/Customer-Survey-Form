@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Customer Survey Form</title>
+</head>
+<body>
+
+    <form id="surveyForm" onsubmit="return validateForm()">
+        <h2>Customer Survey Form</h2>
+
+        <label for="firstName">First Name*
+            <input type="text" id="firstName" required>
+        </label>
+        <label for="lastName">Last Name*
+            <input type="text" id="lastName" required>
+        </label>
+        <label for="dob">Date of Birth*
+            <input type="date" id="dob" required>
+        </label>
+        <label for="country">Country*
+            <select id="country" required>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="srilanka">Sri Lanka</option>
+                <option value="russia">Russia</option>
+        
+            </select>
+        </label>
+        <div class="gender-container">
+            <label>Gender*: </label>
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female" required>
+                Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="other" required>
+                Other
+            </label>
+        </div>
+        <label for="profession">Profession*
+            <input type="text" id="profession" required>
+        </label>
+        <label for="email">Email*
+            <input type="email" id="email" required>
+        </label>
+        <label for="mobile">Mobile Number*
+            <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+        </label>
+
+        <div class="button-container">
+            <button type="button" class="reset" onclick="resetForm()">Reset</button>
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
